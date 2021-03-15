@@ -57,12 +57,14 @@ function displayData()
     {
         trs+=`
             <tr>
-                <td class="text-white">${employees[i].name}</td>
-                <td class="text-white">${employees[i].age}</td>
-                <td class="text-white">${employees[i].salary}</td>
-                <td class="text-white">${employees[i].phone}</td>
-                <td><button onclick="deleteEmployee(${i})" class="btn btn-danger">Delete</button></td>
-                <td><button onclick="getEmployeeData(${i})" class="btn btn-warning">Update</button></td>
+                <td data-label="Name" class="text-white">${employees[i].name}</td>
+                <td data-label="Age" class="text-white">${employees[i].age}</td>
+                <td data-label="Salary" class="text-white">${employees[i].salary}</td>
+                <td data-label="Gender" class="text-white">${employees[i].phone}</td>
+                <td>
+                    <button onclick="deleteEmployee(${i})" class="btn btn-danger mb-1">Delete</button>
+                    <button onclick="getEmployeeData(${i})" class="btn btn-warning mb-1">Update</button>
+                </td>
             </tr>
             `
     }
@@ -102,12 +104,14 @@ function search(searchTxt)
         if(employees[i].name.toLowerCase().includes(searchTxt.toLowerCase()))
         trs+=`
             <tr>
-                <td class="text-white">${employees[i].name}</td>
-                <td class="text-white">${employees[i].age}</td>
-                <td class="text-white">${employees[i].salary}</td>
-                <td class="text-white">${employees[i].phone}</td>
-                <td><button onclick="deleteEmployee(${i})" class="btn btn-danger">Delete</button></td>
-                <td><button onclick="getEmployeeData(${i})" class="btn btn-warning">Update</button></td>
+                <td data-label="Name" class="text-white">${employees[i].name}</td>
+                <td data-label="Age" class="text-white">${employees[i].age}</td>
+                <td data-label="Salary" class="text-white">${employees[i].salary}</td>
+                <td data-label="Gender" class="text-white">${employees[i].phone}</td>
+                <td>
+                    <button onclick="deleteEmployee(${i})" class="btn btn-danger mb-1">Delete</button>
+                    <button onclick="getEmployeeData(${i})" class="btn btn-warning mb-1">Update</button>
+                </td>
             </tr>
             `
     }
